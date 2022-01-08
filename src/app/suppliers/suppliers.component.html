@@ -1,0 +1,55 @@
+<div class="container">
+  <br>
+  <h3>Suppliers</h3>
+  <div class="row d-flex align-items-center">
+      <button type="button" class="btn btn-success col-md-2 m-1" (click)="addNewSupplier()">Add New Supplier</button>
+      <button type="button" class="btn btn-info col-md-2 m-1" (click)="goToProducts()">All Products</button>
+      <div class="col-md-3"></div>
+      <div class=" col-md-4">
+        <div class="input-group flex-nowrap">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="search supplier" aria-label="Recipient's supplier" aria-describedby="button-addon2" [(ngModel)]="search.searchKey">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="searchSupplier()">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <br>
+  <div class="row">
+      <table class="table border">
+        <thead class="thead-light">
+          <tr class="text-center">
+            <th scope="col">No</th>
+            <th scope="col">Supplier Name</th>
+            <th scope="col">Addres</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="listAllSupplier.length > 0">
+          <tr *ngFor="let supplier of listAllSupplier; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{supplier.name}}</td>
+            <td>{{supplier.alamat}}</td>
+            <td>{{supplier.email}}</td>
+            <td class="text-center">
+              <button type="button" class="btn btn-primary m-1" (click)="editSupplier(supplier)">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="btn btn-danger m-1" (click)="deleteSupplier(supplier)">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="btn btn-secondary m-1">Product</button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody *ngIf="listAllSupplier.length == 0">
+          <tr>
+              <td colspan="6" class="text-center">Data not found</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>

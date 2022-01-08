@@ -1,0 +1,62 @@
+<div class="container">
+  <br>
+  <h3 class="">List Product</h3>
+  <div class="row d-flex align-items-center">
+      <button type="button" class="btn btn-success col-md-2 m-1" (click)="addNewProduct()">Add New Product</button>
+      <button type="button" class="btn btn-info col-md-2 m-1" (click)="goToCategories()">All Categories</button>
+      <button type="button" class="btn btn-info col-md-2 m-1" (click)="goToSuppliers()">All Suppliers</button>
+      <div class="col-md-1"></div>
+      <div class=" col-md-4">
+        <div class="input-group flex-nowrap">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="search product by product name" aria-label="Recipient's product" aria-describedby="button-addon2" [(ngModel)]="search.searchKey" >
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="searchProduct()">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <br>
+  <div class="row">
+      <table class="table border">
+        <thead class="thead-light">
+          <tr class="text-center">
+            <th scope="col">No</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="listAllProduct.length > 0">
+          <tr *ngFor="let product of listAllProduct; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>Rp.{{product.price}}</td>
+            <td *ngIf="product.category != null">{{product.category.name}}</td>
+            <td *ngIf="product.category == null" class="text-danger">Tidak di set</td>
+            <td class="text-center">
+              <button type="button" class="btn btn-info m-1">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="btn btn-primary m-1" (click)="editProduct(product)">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="btn btn-danger m-1" (click)="deleteProduct(product)">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="btn btn-secondary m-1" (click)="productSuppliers(product)">Suppliers</button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody *ngIf="listAllProduct.length == 0">
+          <tr>
+              <td colspan="6" class="text-center">Data not found</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <table class="table table-bordered mt-4">
+            <thead class="thead-dark bg-secondary text-white">
+                <tr>
+                <th scope="col" class="text-center" colspan="2">Product</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Product Name</th>
+                    <td>{{product.name}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Description</th>
+                    <td>{{product.description}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Price</th>
+                    <td>{{product.price}}</td>
+                </tr>
+            </tbody>
+            <thead class="thead-dark bg-secondary text-white">
+            <tr>
+                <th scope="col" class="text-center" colspan="2">Product Suppliers</th>
+            </tr>
+            </thead>
+            <tbody *ngIf="listProductSupplier.length > 0">
+                <tr *ngFor="let productSup of listProductSupplier">
+                    <th scope="row">Supplier Name</th>
+                    <td>
+                        {{productSup.name}}
+                        <button type="button" class="btn">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn">
+                            <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody *ngIf="listProductSupplier.length == 0">
+                <tr>
+                    <td colspan="2" class="text-center">Tidak ada supplier</td>
+                </tr>
+            </tbody>
+            <thead class="thead-dark bg-secondary text-white">
+                <tr>
+                    <th scope="col" class="text-center" colspan="2">Other Supplier</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="listAllSupplier.length > 0">
+                <tr *ngFor="let supplier of listAllSupplier">
+                    <th scope="row">{{supplier.name}}</th>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-success" (click)="addSupplier(supplier)">
+                            Tambahkan
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="container mt-5 col-md-8">
+        <div class="row">
+            <h3 class="text-center">{{title}}</h3>
+        </div>
+        <input type="text" class="form-control" placeholder="id" aria-label="Id" [(ngModel)]="supplier.id" aria-describedby="id" hidden>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="name">Supplier Name</span>
+            </div>
+            <input type="text" class="form-control" placeholder="name" aria-label="Name" [(ngModel)]="supplier.name" aria-describedby="name">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="description">Addres</span>
+            </div>
+            <input type="text" class="form-control" placeholder="addres" aria-label="Addres" [(ngModel)]="supplier.alamat" aria-describedby="description">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="price">Email</span>
+            </div>
+            <input type="email" class="form-control" placeholder="email" aria-label="Email" [(ngModel)]="supplier.email" aria-describedby="price">
+        </div>
+        <div class="row">
+            <div class="col-6 text-end">
+                <button type="button" class="btn btn-secondary" (click)="goBack()">Cancel</button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-success" (click)="save()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+

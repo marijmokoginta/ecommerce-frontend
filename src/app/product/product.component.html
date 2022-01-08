@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="container mt-5 col-md-8">
+        <div class="row">
+            <h3 class="text-center">{{title}}</h3>
+        </div>
+        <div *ngIf="massage != '' " class="alert alert-danger text-center" role="alert">
+            <b>{{massage}}</b>
+        </div>
+        <input type="text" class="form-control" placeholder="id" aria-label="id" [(ngModel)]="product.id" aria-describedby="id" hidden>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="name">Product Name</span>
+            </div>
+            <input type="text" class="form-control" placeholder="name" aria-label="Name" [(ngModel)]="product.name" aria-describedby="name">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="description">Product Description</span>
+            </div>
+            <input type="text" class="form-control" placeholder="description" aria-label="Description" [(ngModel)]="product.description" aria-describedby="description">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="price">Price</span>
+            </div>
+            <input type="number" class="form-control" placeholder="price" aria-label="Price" [(ngModel)]="product.price" aria-describedby="price">
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Category</label>
+            <select class="form-select" id="inputGroupSelect01" [(ngModel)]="product.categoryId">
+                <option *ngIf="product.category == null" selected>Pilih kategori</option>
+                <option *ngIf="product.category != null" [value]="product.category.id">{{product.category.name}}</option>
+                <option *ngFor="let category of listAllCategory" value="{{category.id}}">{{category.name}}</option>
+            </select>
+            <!-- <select [(ngModel)]="model">
+                <option *ngFor="let item of list" [value]="item">{{item}}</option>
+            </select> -->
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect02">Supplier</label>
+            <select class="form-select" id="inputGroupSelect02" [(ngModel)]="product.supplierId">
+                <!-- <option *ngIf="product.suppliers != null" value="{{product.suppliers.id}}" selected>{{product.suppliers.name}}</option> -->
+                <option *ngFor="let supplier of listAllSupplier" value="{{supplier.id}}">{{supplier.name}}</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-6 text-end">
+                <button type="button" class="btn btn-secondary" (click)="goBack()">Cancel</button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-success" (click)="save()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
