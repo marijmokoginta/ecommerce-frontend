@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-25T02:47:22.250Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="xduyNFVW7tX1z4ociTdy" version="23.0.1" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-01-25T02:55:18.923Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="eBvqBSJ48fvYsh5Qv04c" version="23.0.1" type="github" pages="4">
   <diagram name="Page-1" id="b520641d-4fe3-3701-9064-5fc419738815">
     <mxGraphModel dx="1354" dy="862" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -438,6 +438,11 @@
         <mxCell id="_dTR78Xdchif8kFsv90l-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_dTR78Xdchif8kFsv90l-10" target="MW9mJbALw7Dl7Z3zOOQP-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="JL_dY8dHi2dq6NXe4RLm-3" value="Data Pasien" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_dTR78Xdchif8kFsv90l-11">
+          <mxGeometry x="0.5069" y="4" relative="1" as="geometry">
+            <mxPoint x="6" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="_dTR78Xdchif8kFsv90l-10" value="PASIEN" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="90" y="450" width="120" height="60" as="geometry" />
         </mxCell>
@@ -450,6 +455,11 @@
         <mxCell id="_dTR78Xdchif8kFsv90l-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_dTR78Xdchif8kFsv90l-15" target="MW9mJbALw7Dl7Z3zOOQP-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="JL_dY8dHi2dq6NXe4RLm-4" value="Data Antrian" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_dTR78Xdchif8kFsv90l-17">
+          <mxGeometry x="0.6671" relative="1" as="geometry">
+            <mxPoint x="-7" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="_dTR78Xdchif8kFsv90l-15" value="PASIEN" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="90" y="700" width="120" height="60" as="geometry" />
         </mxCell>
@@ -457,6 +467,11 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="320" y="490" as="sourcePoint" />
             <mxPoint x="370" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JL_dY8dHi2dq6NXe4RLm-1" value="Data Dokter" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_dTR78Xdchif8kFsv90l-18">
+          <mxGeometry x="0.0065" y="2" relative="1" as="geometry">
+            <mxPoint y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
